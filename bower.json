@@ -1,0 +1,27 @@
+{
+  "name": "purescript-ethereum-abi",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Unisay/purescript-ethereum-abi.git"
+  },
+  "dependencies": {
+    "purescript-prelude": "^3.1.1",
+    "purescript-console": "^3.0.0",
+    "purescript-typelevel": "^3.0.0",
+    "purescript-binary": "^0.2.6"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0",
+    "purescript-test-unit": "^13.0.0",
+    "purescript-stringutils": "^0.0.7",
+    "purescript-unicode": "^3.0.1",
+    "purescript-quickcheck": "^4.6.0"
+  }
+}

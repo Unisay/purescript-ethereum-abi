@@ -1,0 +1,32 @@
+{
+  "name": "purescript-ethereum-abi",
+  "version": "1.0.0",
+  "description": "Ethereum ABI types",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "scripts": {
+      "postinstall": "bower cache clean && bower install"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unisay/purescript-ethereum-abi.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "blockchain",
+    "purescript",
+    "abi"
+  ],
+  "author": "Yuriy Lazarev <unisay@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unisay/purescript-ethereum-abi/issues"
+  },
+  "homepage": "https://github.com/Unisay/purescript-ethereum-abi#readme",
+  "dependencies": {
+  }
+}
