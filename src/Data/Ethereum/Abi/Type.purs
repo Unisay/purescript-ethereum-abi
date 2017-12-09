@@ -1,5 +1,6 @@
 module Data.Ethereum.Abi.Type
-  ( UnsignedFixed
+  ( module Bytes
+  , UnsignedFixed
   , mkUnsignedFixed
   , SignedFixed
   , mkSignedFixed
@@ -17,11 +18,11 @@ import Data.Array as A
 import Data.Binary.SignedInt (SignedInt)
 import Data.Binary.UnsignedInt (UnsignedInt)
 import Data.Ethereum.Abi.Class (class AbiType)
+import Data.Ethereum.Abi.Type.Bytes as Bytes
 import Data.Ethereum.Abi.Type.Class (class Dividend8)
-import Data.Maybe (Maybe(..))
-import Data.Typelevel.Num (class LtEq, class Pos, type (:*), D1, D19, D2, D3, D8, D80, toInt)
-
-
+import Data.Maybe (Maybe(Nothing, Just))
+import Data.Typelevel.Num (class LtEq, class Pos, type (:*), D1, D19, D2, D3, D8, D80)
+import Data.Typelevel.Num as Nat
 
 -- | bytes<M>: binary type of M bytes, 0 < M <= 32
 class (Pos m, LtEq m (D3 :* D2)) <= From1to32 m
@@ -68,7 +69,7 @@ mkFixedLenArray :: ∀ m a.
                    AbiType a =>
                    m -> Array a -> Maybe (FixedLenArray m a)
 mkFixedLenArray m as
-  | A.length as == toInt m = Just $ FixedLenArray as
+  | A.length as == Nat.toInt m = Just $ FixedLenArray as
   | otherwise = Nothing
 
 -- | <type>[]: a variable-length array of elements of the given type

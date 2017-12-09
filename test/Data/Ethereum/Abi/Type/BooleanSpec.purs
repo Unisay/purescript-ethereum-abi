@@ -10,10 +10,10 @@ import Test.Unit.QuickCheck (quickCheck)
 
 spec :: ∀ e. TestSuite (random :: RANDOM | e)
 spec = do
-  suite "Abi Types" do
-    test "encoded Boolean is a correct hex encoding" $
+  suite "Boolean" do
+    test "produces a correct hex encoding" $
       quickCheck $ propTypeEncMultiple32b :: Boolean -> Result
-    test "encoded Boolean is multiple of 32 bits" $
+    test "encoded length is multiple 32" $
       quickCheck $ propTypeEncMultiple32b :: Boolean -> Result
-    test "encoded Boolean is decodable" $
+    test "encoding roundtrip" $
       quickCheck $ propTypeEncIsDecodable :: Boolean -> Result

@@ -12,6 +12,7 @@ import Test.Unit.Main (runTest)
 import Data.Ethereum.Abi.Type.UnsignedInt.Spec as UnsignedInt
 import Data.Ethereum.Abi.Type.SignedInt.Spec as SignedInt
 import Data.Ethereum.Abi.Type.Boolean.Spec as Boolean
+import Data.Ethereum.Abi.Type.Bytes.Spec as Bytes
 
 main :: ∀ e. Eff ( console    :: CONSOLE
                  , testOutput :: TESTOUTPUT
@@ -23,3 +24,4 @@ main = runTest do
   UnsignedInt.spec
   SignedInt.spec
   Boolean.spec
+  Bytes.spec

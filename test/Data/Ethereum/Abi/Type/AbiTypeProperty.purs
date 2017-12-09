@@ -5,7 +5,7 @@ import Prelude
 import Data.Either (Either(Right))
 import Data.Ethereum.Abi.Class (class AbiType, dec, enc)
 import Data.String as S
-import Test.QuickCheck (Result, (<?>))  
+import Test.QuickCheck (Result, (<?>))
 
 propTypeEncMultiple32b :: ∀ a. AbiType a => Show a => a -> Result
 propTypeEncMultiple32b t =
